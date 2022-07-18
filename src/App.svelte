@@ -18,13 +18,19 @@
   const toggleModal = () => {
     showModal = !showModal;
   };
+
+  const addPerson = (e) => {
+    const person = e.detail;
+    people    = [person, ...people];
+    showModal = false;
+  }
 </script>
 
 <Modal
   {showModal}
   on:click={toggleModal}
 >
-  <AddPersonForm/>
+  <AddPersonForm on:addPerson={addPerson}/>
 </Modal>
 
 <main>
@@ -36,9 +42,13 @@
         <p><strong>MASTER NINJA</strong></p>
       {/if}
       <p>{person.age} years old, {person.beltColour} belt.</p>
+      {#if person.skills}
+        <p><i>{person.skills.join(', ')}</i></p>
+      {/if}
       <button on:click={() => handleClick(person.id)}>
         delete
       </button>
+      <hr>
     </div>
   {:else}
     <p>There are not people to show...</p>
