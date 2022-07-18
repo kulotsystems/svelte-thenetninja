@@ -6,6 +6,8 @@ This template should help get you started developing with Svelte in Vite.
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
+## Preview
+Access <https://www.kulotsystems.tech/old/apps/learn/svelte-thenetninja>.
 
 ## Project Setup
 Install dependencies.
