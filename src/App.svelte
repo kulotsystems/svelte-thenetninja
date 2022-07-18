@@ -20,10 +20,18 @@
 </script>
 
 <Modal
-    message="Hey, I am a prop value."
-    {showModal}
-    on:click={toggleModal}
-/>
+  {showModal}
+  on:click={toggleModal}
+>
+  <div slot="title">
+    <h3>Add a New Person</h3>
+  </div>
+  <form>
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="belt colour">
+    <button>Add Person</button>
+  </form>
+</Modal>
 
 <main>
   <button on:click={toggleModal}>Open Modal</button>
