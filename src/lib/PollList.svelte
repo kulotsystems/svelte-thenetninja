@@ -5,9 +5,9 @@
 
     export let polls = [];
 
-    const unsub = PollStore.subscribe((data) => {
-        polls = data;
-    });
+    // const unsub = PollStore.subscribe((data) => {
+    //     polls = data;
+    // });
 
     // // lifecycle hooks
     // onMount(() => {
